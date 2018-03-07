@@ -11,6 +11,7 @@ import android.widget.Button;
 //import com.b2nstudios.firstdagger.DaggerResources.DaggerAppComponent;
 
 import javax.inject.Inject;
+import javax.inject.Named;
 
 public class MainActivity extends AppCompatActivity {
     private static final String LOG_TAG = MainActivity.class.getSimpleName();
@@ -18,12 +19,14 @@ public class MainActivity extends AppCompatActivity {
     @Inject
     Context mContext;
 
-    @Inject
+    @Inject @Named("a_string")
     String mName;
 
     @Inject
     int mErase;
 
+    @Inject @Named("stupid_string")
+    String mTest;
 
     Button mButton;
 
@@ -42,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
 
         Log.e(LOG_TAG, mName);
         Log.e(LOG_TAG, mErase +"");
+        Log.e(LOG_TAG, mTest );
         if(mContext != null){
             Log.e(LOG_TAG, "We have context!");
         }

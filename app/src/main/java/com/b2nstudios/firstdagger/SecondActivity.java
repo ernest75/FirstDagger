@@ -5,12 +5,13 @@ import android.os.Bundle;
 import android.util.Log;
 
 import javax.inject.Inject;
+import javax.inject.Named;
 
 public class SecondActivity extends AppCompatActivity {
 
     private static final String LOG_TAG ="SecondActivity" ;
 
-    @Inject
+    @Inject @Named("a_string")
     String mName;
 
     @Override

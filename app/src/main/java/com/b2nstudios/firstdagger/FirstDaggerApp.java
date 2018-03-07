@@ -8,10 +8,6 @@ import com.b2nstudios.firstdagger.DaggerResources.AppModule;
 import com.b2nstudios.firstdagger.DaggerResources.DaggerAppComponent;
 
 
-/**
- * Created by xavi on 23/12/2017.
- */
-
 public class FirstDaggerApp extends Application {
     private static final String LOG_TAG = FirstDaggerApp.class.getSimpleName();
 
